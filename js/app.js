@@ -26,9 +26,11 @@ function loadList(array) {
 }
 //clear
 clear.addEventListener("click", function () {
+  if (confirm("Are you sure to delete this record ?")) {
     localStorage.clear();
     location.reload();
-})
+  }
+});
 //Date
 const options = { weekday: "long", month: "short", day: "numeric" };
 const today = new Date();
